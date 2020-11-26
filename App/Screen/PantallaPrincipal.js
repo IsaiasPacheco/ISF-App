@@ -25,7 +25,7 @@ export default function Pantallaprincipal({navigation}){
 
     return(
         <View>
-            <Header progreso={count} indexImg={4} />
+            <Header progreso={count} indexImg={0} />
             <Text> Pantallaprincipal </Text>
             <Button title="Hablar" onPress={ ()=> Tts.speak("Hola esta es una prueba") }/>
             <Button title="Aumentar Progreso" onPress={ () => aumentarProgreso() } />

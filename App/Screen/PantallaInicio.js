@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { Text, View, Button, ImageBackground } from 'react-native'
+import { Text, View, Button, ImageBackground, Image } from 'react-native'
 import Tts from 'react-native-tts'
 
 import imgBg from '@resources/Images/background.jpg'
@@ -24,8 +24,11 @@ export default function PantallaInicio ({navigation}) {
     return(
         <View style={stylesLogin.container}>
             <ImageBackground source={require('@resources/Images/background.jpg')} style = {stylesLogin.image}>
-                <Text style={stylesLogin.text}> Hola mundo </Text>
-                <Button  title='Iniciar' color="#841584" onPress={ () => navigation.navigate("PantallaPrincipal")} />
+                <View style={stylesLogin.iconContainer} >
+                    <Image style={stylesLogin.icon} source={require('@resources/Images/bear.png')}/>
+                </View>
+                <Text style={stylesLogin.text}> Bienvenido @Usuario </Text>
+                <Button  title='Iniciar' color="#fcbd00" onPress={ () => navigation.navigate("PantallaPrincipal")} />
             </ImageBackground>
         </View>
     );
