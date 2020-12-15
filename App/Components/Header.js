@@ -29,7 +29,7 @@ const Header = (props) => {
         <Progress progreso={props.progreso}/>
         <Heart />
       </View>
-      <Text style={styles.title}>Barra de progreso</Text>
+      <Text style={styles.title}>@Nombre del cuento</Text>
       <Character indexImg={props.indexImg} />
     </View>
   );
