@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry,TouchableOpacity, View, StyleSheet, ScrollView, Image, LayoutAnimation, } from 'react-native';
+import { AppRegistry,TouchableOpacity, View, StyleSheet, ScrollView, Image, LayoutAnimation, Button, } from 'react-native';
 
 import Lectura_item from '../Components/MiniJuego_Lectura_items/Lectura_item.js'
 import Header from '@components/Header'
@@ -70,15 +70,9 @@ export default class MiniJuego_Lectura extends Component {
               })}
             </View>
           </ScrollView>
-  
-          <TouchableOpacity
-            activeOpacity={0.8}
-            style={styles.addBtn}
-            disabled={this.state.disabled}
-            onPress={this.addMore}
-          >
-            <Image source={require('@resources/Images/add-button.png')} style={styles.btnImage} />
-          </TouchableOpacity>
+        
+          <Button title="Continuar" color="#58CC00" onPress={this.addMore} /> 
+        
         </View>
       );
     }
