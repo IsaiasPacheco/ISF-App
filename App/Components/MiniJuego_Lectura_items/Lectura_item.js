@@ -41,7 +41,9 @@ export default class Lectura_item extends Component {
         }
       ).start(() => {
         this.props.afterAnimationComplete();
-        Tts.speak("Hola");
+        const num = this.props.item.index;
+        console.log(this.props.item.text);
+        Tts.speak("Texto de prueba " + this.props.item.text);
       });
     }
   
@@ -79,16 +81,17 @@ export default class Lectura_item extends Component {
         >
           <TouchableOpacity
             style={styles.removeBtn}
-            onPress={this.removeItem}
+  
           >
             <Image
+              source = {require('@resources/Images/audio.png')}
               style={styles.btnImage}
             />
           </TouchableOpacity>
           
           <Text
             style={styles.displayText}>
-            Row Now :  {this.props.item.text}
+            Texto de prueba  {this.props.item.text}
           </Text>
           
         </Animated.View>
