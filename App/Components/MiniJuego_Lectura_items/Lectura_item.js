@@ -47,6 +47,10 @@ export default class Lectura_item extends Component {
       });
     }
   
+    reEscuchar = () => {
+      Tts.speak("Texto de prueba " + this.props.item.text);
+    }
+
     removeItem = () => {
       Animated.timing(
         this.animatedValue,
@@ -81,7 +85,7 @@ export default class Lectura_item extends Component {
         >
           <TouchableOpacity
             style={styles.removeBtn}
-  
+            onPress = {this.reEscuchar}
           >
             <Image
               source = {require('@resources/Images/audio.png')}
