@@ -8,6 +8,9 @@ const CHARACTER_WIDTH = 150;
 const CHARACTER_ASPECT_RATIO = 560 / 449.75;
 const styles = StyleSheet.create({
   image: {
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignSelf: 'center',
     width: CHARACTER_WIDTH,
     height: CHARACTER_WIDTH * CHARACTER_ASPECT_RATIO,
   },

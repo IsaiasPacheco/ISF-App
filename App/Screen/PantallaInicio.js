@@ -27,7 +27,7 @@ export default function PantallaInicio ({navigation}) {
                 <View style={stylesLogin.iconContainer} >
                     <Image style={stylesLogin.icon} source={require('@resources/Images/bear.png')}/>
                 </View>
-                <Text style={stylesLogin.text}> Bienvenido @Usuario </Text>
+                <Text style={stylesLogin.text}> Bienvenido </Text>
                 <Button  title='Iniciar' color="#fcbd00" onPress={ () => navigation.navigate("PantallaPrincipal")} />
             </ImageBackground>
         </View>

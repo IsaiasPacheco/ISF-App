@@ -12,6 +12,9 @@ target 'ISF' do
 
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
 
+
+  pod 'RNSound', :path => '../node_modules/react-native-sound'
+
   target 'ISFTests' do
     inherit! :complete
     # Pods for testing

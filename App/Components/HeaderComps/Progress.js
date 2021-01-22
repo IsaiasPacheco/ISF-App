@@ -9,7 +9,7 @@ const width = Dimensions.get("window").width - 16 * 4 - CROSS_SIZE - HEART_SIZE;
 const SvgComponent = (props) => {
 
   
-  var progresoa = `M5.5 5.5H${parseInt(props.progreso)}`
+  var progresoa = `M5.5 5.5H${parseInt(props.progreso)+0}`
   var progresob = `M8.5 5.5h${parseInt(props.progreso)-10}`
 
   return (
@@ -20,7 +20,7 @@ const SvgComponent = (props) => {
         justifyContent: "center",
       }}
     >
-      <Svg width={width} height={(width * 11) / 111} viewBox="0 0 111 11">
+      <Svg width={width} height={(width * 11) / 111} viewBox="0 0 111 12">
         <G fill="none" fillRule="evenodd" strokeLinecap="round">
           <Path d="M5.5 5.5h99.55" stroke="#E4E4E4" strokeWidth={10} />
           <Path d={progresoa} stroke="#58CC00" strokeWidth={10} />

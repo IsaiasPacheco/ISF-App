@@ -5,20 +5,56 @@ import Tts from 'react-native-tts'
 
 const width = Dimensions.get('window').width;
 
-const cuento = {
-    narrador: "Bienvenido",
-    pa: "Hola",
-    pb: "Profesor",
-    pa: "esta es una prueba",
-    pb: "del laz voces de personajes"
+function funLeer(personaje, texto) {
+  let aux = String(personaje);
+  aux=aux.split("_",1);
+  let auxCad = aux[0];
+
+  //console.log(auxCad);
+  Tts.setDucking(true);
+  Tts.setDefaultRate(0.57);
+  Tts.setDefaultLanguage('es-MX');
+
+  if( auxCad === "narrador"){
+    //console.log("narrador hablando...");
+    Tts.setDefaultVoice("Juan");
+    Tts.speak(""+texto);
+  }else if(auxCad === "p1"){
+    //console.log("personaje hablando");
+    Tts.setDefaultVoice("Diego");
+    Tts.speak(""+texto);
+  }else if(auxCad == "p2"){
+    Tts.setDefaultVoice("Angelica");
+    Tts.speak(""+texto);
+  }else if(auxCad == "p3"){
+    Tts.setDefaultVoice("Isabela");
+    Tts.speak(""+texto);
+  }else if(auxCad == "p4"){
+    Tts.setDefaultVoice("Jorge");
+    Tts.speak(""+texto);
+  }else if(auxCad == "p5"){
+    Tts.setDefaultVoice("Monica");
+    Tts.speak(""+texto);
+  }else if(auxCad == "p6"){
+    Tts.setDefaultVoice("Carlos");
+    Tts.speak(""+texto);
+  }else if(auxCad == "p7"){
+    Tts.setDefaultVoice("Paulina");
+    Tts.speak(""+texto);
+  }else if(auxCad == "p8"){
+    Tts.setDefaultVoice("Francisca");
+    Tts.speak(""+texto);
+  }
 }
 
+
+
 export default class Lectura_item extends Component {
+
 
     constructor() {
       super();
       this.animatedValue = new Animated.Value(0);
-  
       if (Platform.OS === 'android') {
         UIManager.setLayoutAnimationEnabledExperimental(true);
       }
@@ -42,13 +78,16 @@ export default class Lectura_item extends Component {
       ).start(() => {
         this.props.afterAnimationComplete();
         const num = this.props.item.index;
-        console.log(this.props.item.text);
-        Tts.speak("Texto de prueba " + this.props.item.text);
+        Tts.stop();
+        funLeer(this.props.quienHabla, this.props.item.text);
+        //Tts.speak(""+this.props.item.text);
+        this.props.clikHandler();
       });
     }
   
     reEscuchar = () => {
-      Tts.speak("Texto de prueba " + this.props.item.text);
+      Tts.stop();
+      Tts.speak("" + this.props.item.text);
     }
 
     removeItem = () => {
@@ -93,9 +132,10 @@ export default class Lectura_item extends Component {
             />
           </TouchableOpacity>
           
+          
           <Text
             style={styles.displayText}>
-            Texto de prueba  {this.props.item.text}
+            {this.props.item.text}
           </Text>
           
         </Animated.View>
@@ -112,12 +152,19 @@ export default class Lectura_item extends Component {
         alignItems: 'flex-start',
         margin: 4,
         paddingLeft: 15,
-        borderRadius: 10
+        borderRadius: 10,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.5,
+        shadowRadius: 2,
+        elevation: 2,
       },
       displayText: {
         color: 'black',
         fontSize: 25,
-        paddingRight: 17
+        paddingRight: 35,
+        marginRight: 20,
+        textAlign: 'justify'
       },
       removeBtn: {
         position: 'absolute',
