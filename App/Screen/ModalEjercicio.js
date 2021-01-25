@@ -132,10 +132,11 @@ const styles = StyleSheet.create(
       },
 
       enunciado:{
+        color: '#000',
         flexDirection: 'row',
         justifyContent: 'center',
-        borderWidth: 2,
-        borderColor: '#0081d6',
+        borderWidth: 1.5,
+        borderColor: '#000',
         paddingLeft: 40,
         paddingRight: 40,
         paddingBottom: 15,
@@ -171,9 +172,9 @@ const styles = StyleSheet.create(
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.5,
         shadowRadius: 2,
-        elevation: 2,
+        elevation: 5,
         fontFamily: "Pineapple Grass",
-        borderWidth: 2,
+        borderWidth: 1,
         borderColor: '#bde4ff',
       },
 
@@ -194,9 +195,9 @@ const styles = StyleSheet.create(
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.5,
         shadowRadius: 2,
-        elevation: 2,
+        elevation: 5,
         fontFamily: "Pineapple Grass",
-        borderWidth: 2,
+        borderWidth: 1,
         borderColor: '#bde4ff',
       },
 

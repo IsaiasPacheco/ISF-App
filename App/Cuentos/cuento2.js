@@ -1,13 +1,13 @@
 export default cuento2 = {
     narrador_0: "A gusto duerme el gato",
-    narrador_1: "en torno de sí mismo",
+    narrador_1: "en torno de sí mismo:",
     narrador_2: "de pata y lomo a cola",
     narrador_3: "es él y da lo mismo.",
     pregunta_0: {
         p: "¿Cómo esta dormido el gato?",
         a: "Muy cómodo",
-        b: "Incomodo",
-        c: "No esta dormido",
+        b: "Incómodo",
+        c: "No está dormido",
         respuesta: "a",
         progreso: 110
     },

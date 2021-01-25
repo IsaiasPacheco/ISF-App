@@ -16,7 +16,7 @@ export default cuento1 = {
     narrador_3: "-contestó el juancito-",
     p3_1: "El ganador la llevará para siempre, así todos sabremos que por ser el más listo, es el rey del desierto.",
     narrador_4: "Así, el águila les dijo:",
-    p1_1: "-Voy a cerrar los ojos y a contar hasta diez. Luego empezaré abuscarlos.",
+    p1_1: "-Voy a cerrar los ojos y a contar hasta diez. Luego empezaré a buscarlos.",
     p1_2: "¡Uno, dos, tres...!",
     pregunta_1: {
         p: "¿Por cuánto tiempo el ganador llevará la corona?",
@@ -39,17 +39,17 @@ export default cuento1 = {
         a: "La iguana",
         b: "La tarántula",
         c: "El juancito",
-        respuesta: "c",
+        respuesta: "a",
         progreso: 27.5
     },
     p1_5: "-Bueno",
     narrador_10: "-dijo el águila",
     p1_6: "-como la tarántula fue la última en aparecer es la ganadora.",
     narrador_11: "Todos aplaudieron y estuvieron de acuerdo, menos la culebra. Iban a ponerle la corona a la tarántula cuando de pronto se escuchó un silbido.",
-    p4_1: "- ¡A mí ni me vean!",
+    p4_1: "-¡A mí ni me vean!",
     narrador_12: "-dijo la culebra-.",
-    p4_2: "Seré envidiosa pero no sé chiflar...",
-    p3_2: "¡Oigan, aquí falta alguien!",
+    p4_2: "-Seré envidiosa pero no sé chiflar...",
+    p3_2: "-¡Oigan, aquí falta alguien!",
     pregunta_3: {
         p: "¿Quién es el que falta?",
         a: "La culebra",
@@ -59,7 +59,7 @@ export default cuento1 = {
         progreso: 27.5
     },
     narrador_13: "—interrumpió el juancito—.",
-    p3_3: "¿Dónde está el camaleón?",
+    p3_3: "-¿Dónde está el camaleón?",
     narrador_14: "Continuará en la siguiente parte",
     fin: true
 

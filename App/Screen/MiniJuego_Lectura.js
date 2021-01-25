@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ScrollView, LayoutAnimation, Button, } from 'react-native';
+import { View, StyleSheet, ScrollView, LayoutAnimation, Button, TouchableOpacity, Text } from 'react-native';
 import Sound from 'react-native-sound';
 
 import Lectura_item from '../Components/MiniJuego_Lectura_items/Lectura_item.js'
@@ -78,6 +78,7 @@ export default class MiniJuego_Lectura extends Component {
           //No se hace nada
         }else{
         obj['pc'] = obj['pc'] + (100/numLecs);
+        obj['completado'] = true;
         storeData(this.props.route.params.arrObj);
         }
           var whoosh = new Sound('lesson_complete.mp3', Sound.MAIN_BUNDLE, (error) => {
@@ -100,7 +101,7 @@ export default class MiniJuego_Lectura extends Component {
       else{
         let cad = Object.values(listaCuentos[this.props.route.params.id_cuento])[this.state.personaje];
         const newlyAddedValue = { id: "id_" + this.index, text: cad };
-    
+        console.log(this.index)
         this.setState({
           disabled: true,
           valueArray: [...this.state.valueArray, newlyAddedValue]
@@ -167,6 +168,8 @@ export default class MiniJuego_Lectura extends Component {
         this.setState({progreso: antes+10})}
     }
     
+
+    
     render() {
 
 
@@ -210,12 +213,18 @@ export default class MiniJuego_Lectura extends Component {
           
           
 
-          <Button title="Continuar" color="#58CC00" onPress={this.addMore} /> 
+          <AppButton onPress={this.addMore} title="Continuar"  /> 
         
         </View>
       );
     }
   }
+
+  const AppButton = ({ onPress, title }) => (
+    <TouchableOpacity onPress={onPress} style={styles.appButtonContainer}>
+      <Text style={styles.appButtonText}>{title}</Text>
+    </TouchableOpacity>
+  );
   
   const styles = StyleSheet.create(
     {
@@ -238,4 +247,22 @@ export default class MiniJuego_Lectura extends Component {
         width: '100%',
   
       },
+      appButtonContainer: {
+        elevation: 8,
+        backgroundColor: "#149900",
+        borderRadius: 15,
+        paddingVertical: 10,
+        paddingHorizontal: 12,
+        marginBottom: 20,
+        paddingBottom: 20,
+        marginLeft: 10,
+        marginRight: 10,
+      },
+      appButtonText: {
+        fontSize: 18,
+        color: "#fff",
+        fontWeight: "bold",
+        alignSelf: "center",
+        textTransform: "uppercase"
+      }
     });
